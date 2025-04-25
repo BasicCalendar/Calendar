@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pages/home_page.dart';
+import 'pages/show_schedules.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +14,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue.shade300),
+        primaryColor: Colors.blueAccent,
+        appBarTheme: const AppBarTheme(
+          titleTextStyle: TextStyle(
+            color: Colors.white,
+            fontSize: 28,
+            fontWeight: FontWeight.w900,
+          ),
+          backgroundColor: Color(0xFF121212),
+        ),
       ),
-      home: const HomePage(title: 'Basic Calendar'),
+      home: const ShowSchedules(),
     );
   }
 }
